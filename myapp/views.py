@@ -13,13 +13,15 @@ def submitquery1(request):
         dictionary={
             "q":q,
             "ans":ans,
-            "error":False
+            "error":False,
+            "result":True
         }
         return render (request, "index.html",context=dictionary)
     except Exception as e:
         dictionary={
             "error-message":str(e),
-            "error":True
+            "error":True,
+            "result":False
         }
         return render (request,"index.html",context=dictionary)
         

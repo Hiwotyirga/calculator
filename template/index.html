@@ -50,8 +50,9 @@
         <div class="col-md-6" style="margin: 0 auto">
           {% if error %}
           <div class="alert alert-danger" role="alert">error</div>
-          {% else %}
-          <div class="alert alert-success" role="alert">{{ans}}</div>
+          {% endif%}
+          {% if result %}
+          <div class="alert alert-success" role="alert">{{q}}={{ans}}</div>
           {% endif %}
         </div>
       </div>
@@ -92,7 +93,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6" style="margin: 0 auto">
+        <div class="col-md-6" style="margin: 0 auto; text-align: center;">
           <p
             class="display-4"
             id="about"
@@ -113,7 +114,7 @@
             class="display-4"
             id="instaraction"
             name="instaraction"
-            style="align-items: center"
+            style="align-items: center ;margin: 0 auto ; text-align: center;"
           >
             Instaraction
           </p>
