@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +20,7 @@
     <title>Calculator</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <a class="navbar-brand" href="#">Calculator</a>
       <button
         class="navbar-toggler"
@@ -37,35 +38,74 @@
         <ul class="navbar-nav mr-auto">
          
          
-         
-         
-         
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#instaraction">Instaraction</a>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-bottom: 20rem;">
         <div class="row">
             <div class="col-md-6" style="margin: 0 auto;">
+                <img class="img-fluid" src="{% static 'th.jpg' %}">
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        <form method="GET" action="{% url 'submitquery' %}">
                             <div class="form-group">
                                 <input type="search" class="form-control" id="query" name="query" style="margin: 1 rem auto 0 auto;">
                             </div>
+                            <div class="row">
+                                <div class="col-md-6"><input type="submit" class="btn btn-success" style="margin: 0 auto ; display: block;"></div>
+                                <div class="col-md-6"> <input type="reset" class="btn btn-danger" style="margin: 0 auto; display: block;"> </div>
+                            </div>
+                            
+                           
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-footer" ></div>
+        <div class="row">
+            <div class="col-md-6" style="margin: 0 auto;">
+                <p class="display-4" id="about" name="about" style="align-items: center;"> About </p>
+                <hr>
+                <p class="lead" style="align-items: center;">
+                    our calculator do mathimatical compute
+                  </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="margin: 0 auto;">
+                <p class="display-4" id="instaraction" name="instaraction" style="align-items: center;"> Instaraction </p>
+                <hr>
+                <ul class="list-group">
+  <li class="list-group-item">+ Adding</li>
+  <li class="list-group-item">- Minus</li>
+  <li class="list-group-item">/ Divivsion
+  <li class="list-group-item">// floor</li>
+  <li class="list-group-item">() bracket</li>
+</ul>
 
+
+
+           </div>
+        </div>
     </div>
     
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6"style="margin: 0 auto;"> <footer class="fixed-botton" style="background-color: black; color: white; text-align: center !important;">Thanks for using our Calculator</footer></div>
+           
+
+        </div>
+    </div>
+
+    
+
     
     
     
